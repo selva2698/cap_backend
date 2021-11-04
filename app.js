@@ -31,9 +31,9 @@ app.use(express.static(path.join(__dirname, "frontend/build")));
       dbName: "flipkart",
       collection: "sessions",
     }),
-    // cookie: {
-    //   maxAge: 7 * 1000 * 60 * 60 * 25, 
-    // },
+    cookie: {
+       maxAge: 7 * 1000 * 60 * 60 * 25, 
+    },
    })
 );
 const PORT = process.env.PORT
