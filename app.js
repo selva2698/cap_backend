@@ -36,7 +36,6 @@ app.use(express.static(path.join(__dirname, "frontend/build")));
     // },
    })
 );
-const PORT = process.env.PORT
 
 require("./auth/passportConfig");
 app.use(passport.initialize());
@@ -57,6 +56,5 @@ app.use("/searchProjects", searchProjectsRouter);
 // app.get("*", (req, res) => {
 //     res.sendFile(path.join(__dirname + "/frontend/build/index.html"));
 //   });
-app.listen(PORT,()=>{console.log("executed")})
 
 module.exports = app;
